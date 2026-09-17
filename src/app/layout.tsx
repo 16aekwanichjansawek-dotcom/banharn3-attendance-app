@@ -13,6 +13,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th">
+      <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              tailwind.config = {
+                theme: {
+                  extend: {
+                    colors: {
+                      school: {
+                        primary: '#6B21A8',
+                        secondary: '#FACC15',
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );
