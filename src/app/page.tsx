@@ -1,84 +1,35 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-800 p-6 md:p-12">
-      <div className="max-w-4xl mx-auto">
+    <main className="min-h-screen bg-gradient-to-br from-school-primary to-purple-900 flex flex-col items-center justify-center p-6 text-white relative overflow-hidden">
+      {/* Decorative Circles */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-school-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+
+      <div className="z-10 text-center max-w-3xl flex flex-col items-center">
+        <div className="w-24 h-24 bg-white/20 rounded-2xl backdrop-blur-xl mb-8 flex items-center justify-center shadow-2xl border border-white/30">
+          <span className="text-4xl">??</span>
+        </div>
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
+          ????????????????????????
+        </h1>
+        <h2 className="text-2xl md:text-3xl font-medium text-school-secondary mb-10">
+          ????????????????????????? 3
+        </h2>
+        <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl leading-relaxed">
+          ????????????????????????????????? ????????????????????? ?????????????????????????????????????? ?????? ??????????????????????
+        </p>
         
-        {/* Header Section */}
-        <div className="bg-blue-900 text-white p-8 rounded-2xl shadow-lg mb-8 flex flex-col md:flex-row items-center justify-between">
-          <div>
-            <span className="bg-amber-400 text-blue-950 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">
-              ระบบสารสนเทศสถานศึกษา
-            </span>
-            <h1 className="text-3xl md:text-4xl font-extrabold mt-3">
-              โรงเรียนบรรหารแจ่มใสวิทยา 3
-            </h1>
-            <p className="text-blue-200 mt-1">
-              ระบบเช็คชื่อนักเรียนและจัดการเลื่อนชั้นประจำปีการศึกษา
-            </p>
-          </div>
-          <div className="mt-4 md:mt-0 bg-blue-800 p-4 rounded-xl border border-blue-700 text-center">
-            <p className="text-xs text-blue-300">สถานะระบบ</p>
-            <p className="text-emerald-400 font-bold text-sm flex items-center justify-center gap-1 mt-1">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              พร้อมใช้งาน (Online)
-            </p>
-          </div>
+        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+          <Link href="/login" className="px-8 py-4 bg-school-secondary text-school-primary font-bold rounded-xl hover:bg-yellow-300 transition shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200 text-lg">
+            ????????????????????
+          </Link>
+          <Link href="/dashboard" className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition shadow-lg text-lg">
+            ??????????? Dashboard
+          </Link>
         </div>
-
-        {/* Menu Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          {/* Menu 1: เช็คชื่อ */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-            <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl font-bold mb-4">
-              📝
-            </div>
-            <h2 className="text-xl font-bold text-slate-900">เช็คชื่อประจำวัน</h2>
-            <p className="text-slate-500 text-sm mt-1 mb-4">
-              บันทึกสถิติ มา, ขาด, ลา, สาย ของนักเรียนแต่ละห้องเรียนแบบ Real-time
-            </p>
-            <span className="text-blue-600 font-medium text-sm inline-flex items-center gap-1 cursor-not-allowed">
-              กำลังพัฒนา...
-            </span>
-          </div>
-
-          {/* Menu 2: จัดการนักเรียน */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-            <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center text-xl font-bold mb-4">
-              👥
-            </div>
-            <h2 className="text-xl font-bold text-slate-900">ข้อมูลนักเรียน</h2>
-            <p className="text-slate-500 text-sm mt-1 mb-4">
-              เพิ่ม ลบ แก้ไขรายชื่อนักเรียน และจัดห้องเรียนตามระดับชั้น
-            </p>
-            <span className="text-emerald-600 font-medium text-sm inline-flex items-center gap-1 cursor-not-allowed">
-              กำลังพัฒนา...
-            </span>
-          </div>
-
-          {/* Menu 3: ระบบเลื่อนชั้น */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-            <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-xl font-bold mb-4">
-              🎓
-            </div>
-            <h2 className="text-xl font-bold text-slate-900">ระบบเลื่อนชั้น</h2>
-            <p className="text-slate-500 text-sm mt-1 mb-4">
-              เลื่อนระดับชั้นนักเรียนขึ้นปีการศึกษาใหม่ (เช่น ม.1 เป็น ม.2) รวดเดียวทั้งระบบ
-            </p>
-            <span className="text-amber-600 font-medium text-sm inline-flex items-center gap-1 cursor-not-allowed">
-              กำลังพัฒนา...
-            </span>
-          </div>
-
-        </div>
-
-        {/* Footer info */}
-        <div className="mt-12 text-center text-slate-400 text-xs">
-          พัฒนาด้วย Next.js & Tailwind CSS • สำหรับโรงเรียนบรรหารแจ่มใสวิทยา 3
-        </div>
-
       </div>
     </main>
   );
