@@ -1,33 +1,27 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-school-primary to-purple-900 flex flex-col items-center justify-center p-6 text-white relative overflow-hidden">
-      {/* Decorative Circles */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-school-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-
-      <div className="z-10 text-center max-w-3xl flex flex-col items-center">
-        <div className="w-24 h-24 bg-white/20 rounded-2xl backdrop-blur-xl mb-8 flex items-center justify-center shadow-2xl border border-white/30">
-          <span className="text-4xl">??</span>
+    <main className="min-h-screen bg-gradient-to-br from-purple-800 to-indigo-900 flex flex-col items-center justify-center p-6 text-white text-center">
+      <div className="max-w-3xl flex flex-col items-center">
+        <div className="w-20 h-20 bg-white/20 rounded-2xl backdrop-blur-md mb-6 flex items-center justify-center shadow-xl text-4xl">
+          🏫
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
-          ????????????????????????
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
+          ระบบเช็คชื่อนักเรียน
         </h1>
-        <h2 className="text-2xl md:text-3xl font-medium text-school-secondary mb-10">
-          ????????????????????????? 3
+        <h2 className="text-xl md:text-2xl font-medium text-yellow-300 mb-8">
+          โรงเรียนบรรหารแจ่มใสวิทยา 3
         </h2>
-        <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl leading-relaxed">
-          ????????????????????????????????? ????????????????????? ?????????????????????????????????????? ?????? ??????????????????????
+        <p className="text-gray-200 mb-10 max-w-xl text-base md:text-lg">
+          ระบบจัดการและติดตามเวลาเรียนของนักเรียน สะดวก รวดเร็ว ตรวจสอบได้แบบเรียลไทม์
         </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-          <Link href="/login" className="px-8 py-4 bg-school-secondary text-school-primary font-bold rounded-xl hover:bg-yellow-300 transition shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200 text-lg">
-            ????????????????????
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link href="/dashboard" className="px-8 py-3 bg-yellow-400 text-purple-900 font-bold rounded-xl shadow-lg hover:bg-yellow-300 transition">
+            เข้าสู่ระบบ Dashboard
           </Link>
-          <Link href="/dashboard" className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition shadow-lg text-lg">
-            ??????????? Dashboard
+          <Link href="/dashboard/attendance" className="px-8 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition">
+            เริ่มเช็คชื่อทันที
           </Link>
         </div>
       </div>
