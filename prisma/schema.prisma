@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id          String       @id @default(uuid())
+  studentId   String       @unique // ????????????
+  firstName   String
+  lastName    String
+  class       String       // ???? ?.1/1
+  academicYear String      // ??????????
+  attendances Attendance[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model Attendance {
+  id        String   @id @default(uuid())
+  studentId String
+  student   Student  @relation(fields: [studentId], references: [id])
+  date      DateTime
+  status    String   // PRESENT, ABSENT, LATE, LEAVE
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
