@@ -4,7 +4,7 @@ export interface Student {
   number: number;
   name: string;
   grade: string; // ม.1 - ม.6
-  room: string;  // 1 - 15 หรือ 1 - 10
+  room: string;  // 1 - 15 หรือ 1 - 11
   className: string; // ม.1/1
   gender: "ชาย" | "หญิง";
 }
@@ -13,9 +13,9 @@ export const GRADES = [
   { grade: "ม.1", maxRooms: 15, level: "ม.ต้น" },
   { grade: "ม.2", maxRooms: 15, level: "ม.ต้น" },
   { grade: "ม.3", maxRooms: 15, level: "ม.ต้น" },
-  { grade: "ม.4", maxRooms: 10, level: "ม.ปลาย" },
-  { grade: "ม.5", maxRooms: 10, level: "ม.ปลาย" },
-  { grade: "ม.6", maxRooms: 10, level: "ม.ปลาย" },
+  { grade: "ม.4", maxRooms: 11, level: "ม.ปลาย" },
+  { grade: "ม.5", maxRooms: 11, level: "ม.ปลาย" },
+  { grade: "ม.6", maxRooms: 11, level: "ม.ปลาย" },
 ];
 
 export const ALL_CLASSES: string[] = [];

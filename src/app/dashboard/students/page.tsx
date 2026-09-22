@@ -146,7 +146,7 @@ export default function StudentsPage() {
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800">จัดการข้อมูลนักเรียน</h1>
           <p className="text-sm text-gray-500 mt-1">
-            แบ่งตามระดับชั้นและห้องเรียน (ม.ต้น 1-15 ห้อง | ม.ปลาย 1-10 ห้อง)
+            แบ่งตามระดับชั้นและห้องเรียน (ม.ต้น 1-15 ห้อง | ม.ปลาย 1-11 ห้อง)
           </p>
         </div>
 

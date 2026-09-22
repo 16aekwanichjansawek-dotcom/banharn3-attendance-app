@@ -74,7 +74,7 @@ export default function DashboardPage() {
             <span className="text-xs text-gray-500">คน</span>
           </div>
           <div className="text-[11px] text-gray-500 mt-2">
-            ม.4 ถึง ม.6 (ชั้นละ 10 ห้อง รวม 30 ห้อง)
+            ม.4 ถึง ม.6 (ชั้นละ 11 ห้อง รวม 33 ห้อง)
           </div>
         </div>
 
@@ -99,7 +99,7 @@ export default function DashboardPage() {
             <p className="text-xs text-gray-500">คลิกที่แต่ละชั้นเพื่อดูจำนวนนักเรียนแยกรายห้อง</p>
           </div>
           <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-full">
-            รวมทั้งโรงเรียน 75 ห้อง
+            รวมทั้งโรงเรียน 78 ห้อง
           </span>
         </div>
 
